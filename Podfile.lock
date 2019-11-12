@@ -30,7 +30,7 @@ DEPENDENCIES:
   - URLNavigator (~> 2.2)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/cocoapods/specs.git:
     - PKHUD
     - ReactorKit
     - Realm
@@ -56,4 +56,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: c0f093a729b3a362bf7409c1e216970e345ceaf1
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.7.5
