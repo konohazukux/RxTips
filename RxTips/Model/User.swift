@@ -30,7 +30,7 @@ extension UserModel: Codable {
   enum CodingKeys: String, CodingKey {
     case id
     case snakeCaseKey = "snake_case_key"
-    case address = "address"
+    case address = "add_ress"
   }
 }
 

@@ -45,6 +45,23 @@ extension ObjectConvertible where Self: Encodable, Result: Object {
     //
     // `Object.init(value:,schema:)` を使用している理由は、メタタイプからは `required init` のみ呼び出し可能なためです。
     // https://github.com/realm/realm-cocoa/issues/5714
+  
+    print("infolog: \(#line)  \(#function) :  \(self) ")
+    
+    let json = try JSONSerialization.jsonObject(
+      with: encoder.encode(self),
+      options: []
+    )
+    print("infolog: \(#line)  \(#function) :  \(json) ")
+    
+    let result = Result(
+      value: json,
+      schema: .partialPrivateShared()
+    )
+    print("infolog: \(#line)  \(#function) :  \(result) ")
+
+    
+    
     return try Result(
       value: JSONSerialization.jsonObject(
         with: encoder.encode(self),
